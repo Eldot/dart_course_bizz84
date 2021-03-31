@@ -6,6 +6,7 @@ import 'package:dart_course_bizz84/src/s65_pizza_ordering.dart';
 import 'package:dart_course_bizz84/src/s66_nested_collections.dart';
 import 'package:dart_course_bizz84/src/s71_shopping_list.dart';
 import 'package:dart_course_bizz84/src/s73_cmdline_processing.dart';
+import 'package:dart_course_bizz84/src/s94_pizza_ordering.dart';
 
 void main(List<String> arguments) {
   var fnToRun = 0;
@@ -31,6 +32,7 @@ void main(List<String> arguments) {
         73 (for CSV file analysis), with
           <argument 2> = 'f' for file, and
           <argument 3> = filename.csv, located in the app folder.
+        94 (for Pizza ordering v2)
           ''');
     exit(1); // Note! if no error, exit code is 0, else non-zero
   }
@@ -62,6 +64,9 @@ void main(List<String> arguments) {
       } else {
         fnResult = s73CmdLineProcessing(arguments[1], arguments[2]);
       }
+      break;
+    case 94:
+      fnResult = s94PizzaOrdering();
       break;
     default:
       msg = 'No function selected. Arguments are $arguments';
